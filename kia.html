@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KIA TOURS AND TRAVELS | Travel Agency</title>
+<style>
+:root{--bg:#fffaf3;--card:#ffffff;--text:#1d2b3a;--muted:#5d6b7a;--accent:#0e7c86;--accent2:#f28c28;--line:#e6dccb;--hero:#0b4f6c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a24;--card:#17252f;--text:#eef3f7;--muted:#9fb0bf;--accent:#35b5c0;--accent2:#f5a04a;--line:#27394a;--hero:#0a3347;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a24;--card:#17252f;--text:#eef3f7;--muted:#9fb0bf;--accent:#35b5c0;--accent2:#f5a04a;--line:#27394a;--hero:#0a3347;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--line);z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:.08em;color:var(--accent)}
+nav a{margin-left:22px;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+#menu{display:none;background:none;border:0;font-size:1.6rem;color:var(--text);cursor:pointer}
+.hero{background:linear-gradient(135deg,var(--hero),#0e7c86);color:#fff;padding:70px 0}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+.tag,.eyebrow{font-size:.78rem;letter-spacing:.15em;font-weight:700;color:var(--accent2)}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:10px 0 14px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;border:2px solid var(--accent2);background:var(--accent2);color:#1d2b3a;cursor:pointer;font-size:1rem}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:30px;text-align:center}
+.hero-card .big{font-size:3rem}
+.hero-card p{margin:6px 0}
+section{padding:68px 0}
+.alt{background:var(--card);border-block:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:6px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.alt .card{background:var(--bg)}
+.card .ic{font-size:1.9rem}
+.card h3{margin:8px 0}
+.card p{color:var(--muted);margin:0 0 12px}
+.card a{color:var(--accent);font-weight:700}
+.about{max-width:720px;color:var(--muted)}
+.num{font-size:2rem;font-weight:800;color:var(--accent2)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:12px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--muted);margin:10px 0 0}
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:34px}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+label{display:block;font-weight:600;font-size:.9rem;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+form .btn{margin-top:16px;background:var(--accent);border-color:var(--accent);color:#fff}
+.note{font-size:.85rem;color:var(--muted);margin-top:10px}
+#ok{color:var(--accent);font-weight:700;display:none}
+footer{background:var(--hero);color:#dbe8ee;text-align:center;padding:36px 20px}
+footer b{letter-spacing:.08em;color:#fff}
+@media(max-width:800px){
+ #menu{display:block}
+ nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--card);border-bottom:1px solid var(--line);padding:10px 20px}
+ nav.open{display:block}
+ nav a{display:block;margin:0;padding:10px 0}
+ .hero .wrap,.grid,.contact{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header id="home"><div class="wrap bar">
+ <div class="logo">KIA TOURS AND TRAVELS</div>
+ <button id="menu" aria-label="Menu">☰</button>
+ <nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+ <div>
+  <div class="tag">TOURS • TICKETING • HOLIDAY PLANNING</div>
+  <h1>Memorable Journeys. Stress-Free Planning.</h1>
+  <p>Welcome to KIA Tours and Travels. We help travellers with tour packages, ticket bookings and trip planning assistance.</p>
+  <div class="btns"><a class="btn" href="#contact">Send an Enquiry</a><a class="btn ghost" href="#services">Our Services</a></div>
+ </div>
+ <div class="hero-card"><div class="big">✈</div><h3>Let’s plan your trip!</h3><p>Tour packages</p><p>Ticket bookings</p><p>Travel assistance</p></div>
+</div></div>
+
+<section id="about" class="alt"><div class="wrap">
+ <div class="eyebrow">ABOUT US</div>
+ <h2>Travel Planning Built on Trust</h2>
+ <p class="about">KIA Tours and Travels aims to provide helpful information and friendly assistance to travellers. Good travel service means listening carefully, understanding your plans and explaining options clearly.</p>
+ <p class="about">This website is a demonstration project that shows how a travel agency can organise its services and offer a simple enquiry interface.</p>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <div class="eyebrow">WHAT WE DO</div>
+ <h2>Our Travel Services</h2>
+ <div class="grid">
+  <div class="card"><div class="ic">🏝</div><h3>Tour Packages</h3><p>Explore domestic and international holiday packages, itineraries and destinations.</p><a href="#contact">Ask About Packages →</a></div>
+  <div class="card"><div class="ic">🎫</div><h3>Ticket Bookings</h3><p>Get help with flight, train and bus ticket enquiries and travel schedules.</p><a href="#contact">Enquire About Tickets →</a></div>
+  <div class="card"><div class="ic">🏨</div><h3>Hotel &amp; Stay Assistance</h3><p>Receive guidance on hotels, resorts and accommodation for your trip.</p><a href="#contact">Get Assistance →</a></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+ <div class="eyebrow">OUR APPROACH</div>
+ <h2>How Travel Enquiries Work</h2>
+ <div class="grid">
+  <div class="card"><div class="num">01</div><h3>Submit</h3><p>The traveller shares a destination, dates or a question.</p></div>
+  <div class="card"><div class="num">02</div><h3>Understand</h3><p>The enquiry is reviewed to understand travel needs and preferences.</p></div>
+  <div class="card"><div class="num">03</div><h3>Respond</h3><p>Clear options and guidance are provided to the traveller.</p></div>
+ </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+ <div class="eyebrow">QUICK ANSWERS</div>
+ <h2>Frequently Asked Questions</h2>
+ <details><summary>How can I ask about a tour package?</summary><p>Use the enquiry form on this website and mention the destination, travel dates and number of travellers.</p></details>
+ <details><summary>Can I check ticket availability?</summary><p>Yes. Submit an enquiry with your route and dates. The agency should confirm availability directly.</p></details>
+ <details><summary>What information should I provide?</summary><p>Include your name, contact details, enquiry type and a short description of your travel plan.</p></details>
+ <details><summary>Can I book a trip through this website?</summary><p>No. This is a demonstration website. It does not process actual bookings or payments.</p></details>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap contact">
+ <div>
+  <div class="eyebrow">CONTACT US</div>
+  <h2>Where Would You Like to Go?</h2>
+  <p class="about">Send your question using the enquiry form. Please give clear details so your request can be understood.</p>
+  <h3>KIA TOURS AND TRAVELS</h3>
+  <p class="about">Kavinmoola-Palayam Rd, near Kavinmoola,<br>Anjarakandy, Kannur, 670611, Kerala<br>Email: <a href="mailto:Kiaanjarakandy@gmail.com" style="color:var(--accent);font-weight:700">Kiaanjarakandy@gmail.com</a><br>Tour packages • Ticket bookings • Hotel assistance</p>
+ </div>
+ <form id="f">
+  <h3 style="margin:0">Send an Enquiry</h3>
+  <label for="n">Full Name</label><input id="n" required>
+  <label for="e">Email Address</label><input id="e" type="email" required>
+  <label for="t">Enquiry Type</label>
+  <select id="t" required><option value="">Select an option</option><option>Tour Package</option><option>Ticket Booking</option><option>Hotel Assistance</option><option>Other</option></select>
+  <label for="m">Your Message</label><textarea id="m" rows="4" required></textarea>
+  <button class="btn" type="submit">Submit Enquiry</button>
+  <p id="ok">Thank you! Your enquiry has been noted (demo only).</p>
+  <p class="note">Demo form: information is not sent or stored.</p>
+ </form>
+</div></section>
+
+<footer>
+ <b>KIA TOURS AND TRAVELS</b>
+ <p>Kavinmoola-Palayam Rd, Anjarakandy, Kannur, 670611, Kerala</p>
+ <p>© Demonstration Website</p>
+ <a href="#home">Back to Top ↑</a>
+</footer>
+
+<script>
+var nav=document.getElementById('nav');
+document.getElementById('menu').onclick=function(){nav.classList.toggle('open')};
+nav.addEventListener('click',function(){nav.classList.remove('open')});
+document.getElementById('f').onsubmit=function(ev){ev.preventDefault();document.getElementById('ok').style.display='block';this.reset()};
+</script>
+</body>
+</html>
